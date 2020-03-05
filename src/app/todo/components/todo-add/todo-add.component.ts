@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import ITodoTask from 'src/app/interfaces/todo.interface';
 import { Store } from '@ngrx/store';
 import { addTask } from '../../actions/todo.actions';
+import { Todo } from 'src/app/models/todo.model';
 
 @Component({
   selector: 'app-todo-add',
@@ -24,10 +25,7 @@ export class TodoAddComponent implements OnInit {
   ngOnInit(): void { }
 
   addTask() {
-    const newTask = {
-      status: false,
-      task: this.actualWritingTask,
-    };
+    const newTask = new Todo(this.actualWritingTask);
     this.store.dispatch(addTask(newTask));
     this.actualWritingTask = null;
   }

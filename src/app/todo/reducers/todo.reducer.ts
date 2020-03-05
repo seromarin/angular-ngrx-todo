@@ -1,7 +1,8 @@
 import { createReducer, on } from '@ngrx/store';
 import { addTask } from '../actions/todo.actions';
+import ITodoTask from 'src/app/interfaces/todo.interface';
 
-export const initialState = [
+export const initialState: ITodoTask[] = [
   {
     status: false,
     task: 'Cazar unicornios'
