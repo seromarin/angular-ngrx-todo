@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "angular-ngrx-todoapp": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-ngrx-todoapp"
+    }
+  },
+  "defaultProject": "angular-ngrx-todoapp",
+  "cli": {
+    "analytics": "36294986-f35d-4241-a53c-edd575d2c38f"
+  }
 }
